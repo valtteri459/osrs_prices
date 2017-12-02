@@ -1,0 +1,388 @@
+Abyssal whip	10
+Adamant arrow	11,000
+Adamant axe	40
+Adamant bolts	11,000
+Adamant dart	11,000
+Adamant dart tip	11,000
+Adamant full helm	125
+Adamant javelin	11,000
+Adamant pickaxe	40
+Adamant platebody	125
+Adamant platelegs	125
+Adamantite bar	10,000
+Adamantite ore	4,500
+Air battlestaff	14,000
+Air orb	10,000
+Air rune	20,000
+Amethyst arrow	11,000
+Amulet of accuracy	5
+Amulet of fury	8
+Amulet of glory	10,000
+Amulet of power	125
+Amulet of strength	125
+Amulet of torture	8
+Amylase crystal	11,000
+Antidote++	4,000
+Antifire potion	2,000
+Archers ring	8
+Archery ticket	18,000
+Armadyl chainskirt	8
+Armadyl chestplate	8
+Armadyl godsword	8
+Armadyl helmet	10
+Arrow shaft	7,000
+Astral rune	10,000
+Bandos boots	8
+Bandos chestplate	8
+Bandos godsword	8
+Bandos tassets	8
+Barrows equipment	10 (or 15)
+Battlestaff	11,000
+Berserker helm	70
+Berserker ring	8
+Big bones	3,000
+Bird snare	250
+Black axe	40
+Black chinchompa	10,000
+Black d'hide body	70
+Black d'hide chaps	70
+Black dragonhide	10,000
+Black pickaxe	40
+Blood rune	10,000
+Blue d'hide body	125
+Blue d'hide chaps	125
+Blue d'hide vamb	125
+Blue dragon leather	13,000
+Blue dragonhide	13,000
+Body rune	12,000
+Bolt rack	11,000
+Bones	3,000
+Bow string	13,000
+Box trap	250
+Bread	6,000
+Brine sabre	8
+Broad bolts	7,000
+Bronze arrow	7,000
+Bronze axe	40
+Bronze dart	7,000
+Bronze pickaxe	40
+Bucket	13,000
+Bucket of milk	13,000
+Bucket of sand	13,000
+Bullseye Lantern (unf)	299+
+Cabbage	6,000
+Cannonball	7,000
+Calquat Tree Seed	200
+Chaos rune	12,000
+Chef's hat	150
+Chinchompa	7,000
+Chocolate bar	13,000
+Chocolate dust	13,000
+Christmas cracker	50
+Clay	13,000
+Climbing boots	15
+Coal	13,000
+Coif	125
+Compost	600
+Compost potion	50
+Copper ore	13,000
+Cosmic rune	12,000
+Cowhide	10,000
+Cup of Tea	2,000
+Dark bow	8
+Dart tips	11,000
+Death rune	10,000
+Dharok's armour set	8
+Disk of returning	5
+Draconic visage	5
+Dragon 2h sword	8
+Dragon arrow	11,000
+Dragon axe	40
+Dragon battleaxe	70
+Dragon bones	7,500
+Dragon boots	70
+Dragon dagger	70
+Dragon longsword	70
+Dragon mace	70
+Dragon med helm	8
+Dragon pickaxe	40
+Dragon scimitar	70
+Dragon spear	70
+Dragon warhammer	8
+Dragonfire shield	8
+Dust rune	12,000
+Earth battlestaff	14,000
+Earth rune	20,000
+Energy potion	2,000
+Feather	13,000
+Filled plant pot	600
+Fire battlestaff	14,000
+Fire rune	20,000
+Fishing bait	8,000
+Flax	13,000
+Flowers	250
+Frozen whip mix	4
+Fury ornament kit	4
+Gilded platebody	8
+Goblin mail	15
+God pages	5
+Gold amulet (u)	18,000
+Gold bar	10,000
+Gold bracelet	18,000
+Gold ore	13,000
+Granite maul	70
+Grapes	13,000
+Green d'hide body	125
+Green d'hide chaps	125
+Green d'hide vamb	125
+Green dragonhide	13,000
+Green dye	150
+Halloween masks	5
+Hammer	40
+Hard leather	10,000
+Hardleather body	125
+Harralander tar	11,000
+Headless arrow	7,000
+Helm of neitiznot	70
+High level herbs	2,000
+Holiday items	5
+Holy elixir	4
+Infinity boots	24
+Infinity hat	10
+Inoculation bracelet	505
+Iron arrow	7,000
+Iron axe	40
+Iron bar	10,000
+Iron dart	7,000
+Iron knife	7,000
+Iron ore	13,000
+Iron pickaxe	40
+Iron platebody	125
+Jug of water	13,000
+Jug of wine	6,000
+Kraken tentacle	70
+Lava battlestaff	8
+Lava rune	12,000
+Law rune	12,000
+Leaf-bladed sword	70
+Leather	10,000
+Leather body	125
+Leather chaps	125
+Leather gloves	125
+Limpwurt root	13,000
+Limpwurt seed	600
+Lizardman fang	13,000
+Lobster	6,000
+Logs	14,000
+Longbow	14,000
+Loop half of key	11,000
+Low level herbs	13,000
+Magic fang	5
+Magic logs	12,000
+Magic longbow	18,000
+Magic longbow (u)	10,000
+Magic seed	200
+Mahogany logs	11,000
+Mahogany plank	13,000
+Maple logs	15,000
+Maple longbow	14,000
+Maple longbow (u)	10,000
+Maple seed	200
+Maple shortbow (u)	10,000
+Mind rune	12,000
+Mist rune	12,000
+Mithril arrow	7,000
+Mithril axe	40
+Mithril bar	10,000
+Mithril dart	7,000
+Mithril dart tip	13,000
+Mithril kiteshield	125
+Mithril ore	13,000
+Mithril pickaxe	40
+Mithril platebody	125
+Mole claw	50
+Mole skin	50
+Molten glass	13,000
+Monk's robe	125
+Monk's robe top	125
+Monkfish	13,000
+Mud rune	12,000
+Mystic lava staff	6
+Mystic mist staff	6
+Mystic smoke staff	6
+Mystic steam staff	6
+Nature rune	12,000
+Oak logs	15,000
+Oak longbow	14,000
+Oak plank	13,000
+Occult necklace	8
+Old School Bond	40
+Onyx bolts	11,000
+Opal	10,000
+Palm tree seed	200
+Papaya tree seed	200
+Partyhats	5
+Pegasian crystal	15
+Pie dish	500
+Plank	13,000
+Prayer potion	2,000
+Primordial boots	8
+Pure essence	20,000
+Ranarr seed	200
+Ranger boots	6
+Raw beef	13,000
+Raw lobster	15,000
+Raw monkfish	13,000
+Raw shark	15,000
+Raw swordfish	15,000
+Raw tuna	15,000
+Raw karambwan	12,500
+Red chinchompa	7,000
+Red d'hide body	70
+Red d'hide chaps	70
+Red d'hide vamb	70
+Red dragonhide	10,000
+Redwood logs	12,000
+Regen bracelet	10
+Rope	250
+Ruby bolt tips	11,000
+Ruby bolts	11,000
+Rune 2h sword	70
+Rune armour set (lg)	8
+Rune armour set (sk)	8
+Rune arrow	11,000
+Rune axe	40
+Rune battleaxe	70
+Rune boots	70
+Rune chainbody	70
+Rune crossbow	70
+Rune dagger	70
+Rune dart	7,000
+Rune full helm	70
+Rune halberd	70
+Rune hasta	70
+Rune kiteshield	70
+Rune kiteshield (g)	8
+Rune longsword	70
+Rune mace	70
+Rune med helm	70
+Rune pickaxe	40
+Rune platelegs	70
+Rune plateskirt	70
+Rune scimitar	70
+Rune spear	70
+Rune sword	70
+Rune warhammer	70
+Runite bolts	10,000
+Runite ore	4,500
+Santa hat	5
+Sapphire	10,000
+Sapphire ring	10,000
+Saradomin brew	2,000
+Saradomin sword	8
+Seaweed	13,000
+Seercull	8
+Seers ring	8
+Serpentine helm	8
+Serpentine visage	5
+Shark	10,000
+Shrimps	15,000
+Silk	18,000
+Silver sickle	15
+Smoke rune	12,000
+Snakeskin body	125
+Snapdragon seed	200
+Soda ash	13,000
+Soul rune	10,000
+Spectral spirit shield	8
+Spirit shield	8
+Splitbark body	70
+Spotted cape	125
+Stamina potion	2,000
+Steam rune	12,000
+Steel arrow	7,000
+Steel arrowtips	10,000
+Steel axe	40
+Steel bar	10,000
+Steel dart	7,000
+Steel pickaxe	40
+Steel platebody	125
+Steel warhammer	125
+Stew	10,000
+Strength potion	2,000
+Super attack	2,000
+Super defence	2,000
+Super energy	2,000
+Super restore	2,000
+Super strength	2,000
+Supercompost	600
+Swamp tar	13,000
+Swordfish	6,000
+Tanzanite fang	5
+Tarromin tar	7,000
+Teak plank	13,000
+Team cape	150
+Thread	7,000
+Tin ore	13,000
+Toadflax seed	600
+Toxic blowpipe	8
+Trading sticks	18,000
+Trident of the seas (full)	8
+Tuna	6,000
+Uncut diamond	10,000
+Uncut emerald	10,000
+Uncut ruby	10,000
+Uncut sapphire	10,000
+Unfinished broad bolts	7,000
+Unpowered orb	10,000
+Varrock teleport	10,000
+Vial	13,000
+Vial of water	13,000
+Volcanic whip mix	6
+Warrior ring	8
+Water battlestaff	14,000
+Water rune	20,000
+Watering can	40
+Watermelon	11,000
+Watermelon seed	200
+Willow logs	15,000
+Willow longbow	14,000
+Willow seed	200
+Wine of zamorak	10,000
+Wyvern bones	7,500
+Yew logs	12,000
+Yew longbow	18,000
+Yew longbow (u)	10,000
+Zamorak robe (bottom)	15
+Zamorak robe (top)	15
+Zamorakian spear	8
+Zul-andra teleport	10,000
+Zulrah's scales	30,000
+Grimy guam leaf	11,000
+Grimy marrentill	11,000
+Grimy tarromin	11,000
+Grimy harralander	11,000
+Grimy ranarr weed	11,000
+Grimy toadflax	11,000
+Grimy irit leaf	11,000
+Grimy avantoe	11,000
+Grimy kwuarm	11,000
+Grimy snapdragon	11,000
+Grimy cadantine	11,000
+Grimy lantadyme	11,000
+Grimy dwarf weed	11,000
+Grimy torstol	11,000
+Guam leaf	11,000
+Marrentill	11,000
+Tarromin	11,000
+Harralander	11,000
+Ranarr weed	11,000
+Toadflax	11,000
+Irit leaf	11,000
+Avantoe	11,000
+Kwuarm	11,000
+Snapdragon	11,000
+Cadantine	11,000
+Lantadyme	11,000
+Dwarf weed	11,000
+Torstol	11,000

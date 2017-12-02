@@ -1,0 +1,148 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+      <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+      <title>OSRS price assistant</title>
+      <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+      .autocomplete-content{
+        z-index:9999 !important;
+        position:relative;
+      }
+      .autocomplete-content > *{
+        z-index:9999 !important;
+      }
+      #putHere{
+        z-index:-1 !important;
+        height:100%;
+        padding-top:25px;
+      }
+      </style>
+    </head>
+
+    <body>
+       <header>
+        <nav class="indigo" style="z-index:5000">
+          <div class="container" style="height:100%">
+            <div class="nav-wrapper">
+              <div class="row"><div class="col s12">
+        <ul class="tabs indigo">
+            <li class="tab col m3 s12"><a class="white-text active" href="#tab1" id="itemSearch">Item search</a></li>
+            <li class="tab col m3 s12"><a class="white-text" href="#tab2" id="alchAssist">Alch assistant</a></li>
+            <li class="tab col m3 s12"><a class="white-text" href="#tab3" id="farmAssist">Farm assistant</a></li>
+            <div class="indicator blue" style="z-index:1"></div>
+        </ul>
+    </div></div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+      <main>
+
+
+
+        <div id="tab1">
+          <header>
+            <nav class="indigo darken-1" style="z-index:5000">
+              <div class="container" style="height:100%">
+                <div class="nav-wrapper">
+                  <form id="searchForm" action="#">
+                    <div class="input-field">
+                      <input id="search" type="search" required autocomplete="off" style="margin: 0">
+                      <label class="label-icon" for="search" style="top: -10px"><i class="material-icons">search</i></label>
+                      <i class="material-icons" id="cancelSearch">close</i>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <div class="container" id="putHere">
+              <h1>Start searching items...</h1>
+          </div>
+        </div>
+        <div id="tab2">
+          <div class="container">
+            <div class="row">
+              <div class="row">
+                
+                <div class="col s12">
+                    <h1>best alchables by price</h1>
+                    price range
+                    <div id="priceRange"></div>
+                </div>
+                <div class="col s12" id="alchAssistant">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab3">
+          <div class="container">
+            <div class="row">
+              <h1>herb seed and yield prices</h1>
+              <p>note. assumes the use of ultracompost and magic secateurs, calculated with the average yield(including chance to die) from standard patches</p>
+              <div class="col s12" id="farmAssistant">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        
+      </main>
+      <footer class="page-footer indigo">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">OSRS price guide</h5>
+              <p class="grey-text text-lighten-4">This application fetches info from the osbuddy and jagex ge price APIs</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              :)
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          this page uses the jagex (runescape.com) and OSBuddy (rsbuddy.com) oldschool runescape price APIs
+          </div>
+        </div>
+      </footer>
+
+
+
+
+
+        
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/nouislider.min.js"></script>
+      <script type="text/javascript" src="js/Chart.min.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+    </body>
+  </html>
+        
