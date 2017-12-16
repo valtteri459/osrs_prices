@@ -387,13 +387,13 @@ function loadItem(data, itemID){
 	                </div>
 					<div class="card">
 						<div class="card-content">
-							<div class="card-title row">chart timescale: <span style="float:right"><a class="btn" id="week">1 Week</a><a class="btn" id="2week">2 weeks</a><a class="btn" id="month">1 Month</a><a class="btn" id="3month">3 months</a><a class="btn" id="halfyear">6 months</a></span></div>
+							<div class="card-title row">chart timescale: <span style="float:right"><a class="btn" id="week" style="margin-right:15px">1 Week</a><a class="btn" id="2week" style="margin-right:15px">2 weeks</a><a class="btn" id="month" style="margin-right:15px">1 Month</a><a class="btn" id="3month" style="margin-right:15px">3 months</a><a class="btn" id="halfyear">6 months</a></span></div>
 						</div>
 					</div>
 	              	<div class='card'>
 	                  <div class='card-content'>
 	            		<div class='card-title'>Prices</div>
-	                    <canvas id="plotMe" style="width:100%"></canvas>
+	                    <canvas id="plotMe" style="width:100%"></canvas><hr/><br/><br/>
 						<h5>Raw data</h5>
 						<div style="max-height:500px;overflow-y:scroll">
 							<div id="priceList"></div>
@@ -404,7 +404,7 @@ function loadItem(data, itemID){
 	              	<div class='card'>
 	                  <div class='card-content'>
 	            		<div class='card-title'>Traded amounts - only OSB users</div>
-						<canvas id="saleHistory" style="width:100%"></canvas>
+						<canvas id="saleHistory" style="width:100%"></canvas><hr/><br/><br/>
 						<h5>Raw data</h5>
 						<div style="max-height:500px;overflow-y:scroll">
 							<div id="saleList"></div>
@@ -513,7 +513,7 @@ function loadItem(data, itemID){
 				}
 			}
 			var priceList = `
-			<table>
+			<table style="background-color:#f5f5f5">
 				<thead>
 					<tr>
 						<th>Date</th>
@@ -540,7 +540,7 @@ function loadItem(data, itemID){
 			$("#priceList").html(priceList);
 
 			var saleList = `
-			<table>
+			<table style="background-color:#f5f5f5">
 				<thead>
 					<tr>
 						<th>date</th>
