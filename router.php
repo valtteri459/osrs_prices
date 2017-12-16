@@ -56,8 +56,34 @@ ini_set('display_errors', 'On');
 
     /*in the future I can make a smart api call caching algorithm here if I need it*/
     function apicall($target){
+        //save the target to an unchanged variable for the potential http request
+        $targetRaw = $target;
+        //replace some symbols in the URL so it can be used as the filename for the cached file
+        $target = str_replace("&", "-", str_replace("/", "_", $target));
+        //set the current time and hardcoded 1 hour expiration
+        $current_time = time(); $expire_time = 60*60; /*1 hour*/;
+        //check if a cache exists
+        if(file_exists("./cached_requests/$target")){
 
-        return get_remote_data($target);
+            //check file time and check if it has expired
+            $file_time = filemtime("./cached_requests/$target");
+            if($current_time - $expire_time < $file_time)
+            {
+                //return cached
+                return file_get_contents("./cached_requests/$target");
+            }else{
+                //refresh cache
+                $content = get_remote_data($targetRaw);
+                file_put_contents("./cached_requests/$target", $content);
+                return $content;
+            }
+            
+        }else{
+            //refresh cache
+            $content = get_remote_data($targetRaw);
+            file_put_contents("./cached_requests/$target", $content);
+            return $content;
+        }
     }
 
 	$requested_resource = $_GET["a"];

@@ -43,6 +43,21 @@ if (!Array.prototype.find) {
   });
 }
 
+function formatDate(date) {
+	var monthNames = [
+	  "January", "February", "March",
+	  "April", "May", "June", "July",
+	  "August", "September", "October",
+	  "November", "December"
+	];
+  
+	var day = date.getDate();
+	var monthIndex = date.getMonth();
+	var year = date.getFullYear();
+  
+	return day + ' ' + monthNames[monthIndex] + ' ' + year;
+  }
+
 function bySortedValue(obj, callback, context) {
   var tuples = [];
 
@@ -58,6 +73,7 @@ function bySortedValue(obj, callback, context) {
 
 
 function abbreviateNumber(value) {
+	if(value == null){value = 0}
     x = value.toString();
     var pattern = /(-?\d+)(\d{3})/;
     while (pattern.test(x))
@@ -310,40 +326,42 @@ function loadItem(data, itemID){
 			alch_cost = abbreviateNumber(Math.abs(alch_cost));
 
 			$("#putHere").html(`<div class='row'>
-	              <div class='col l4 m12 s12'>
-	                <div class='card'>
-	            	  <div class="card-image hide-on-med-and-down">
-		               <img src="https://`+jinfo["icon_large"].substring(7)+`">
-		               
-		              </div>
-	                  <div class='card-content'>
-	            		<div class='card-title'>`+data[itemID].name+`</div>
-	                    <p>`+jinfo["description"]+`</p>
-	                    <table>
-	                    <tr><td>high alchemy price: </td><td>`+abbreviateNumber(alch_reward)+`</td></tr>
-	                    <tr><td>gp per high alch cast: </td><td>`+presymbol+alch_cost+` coins</td></tr>
-	                    <tr><td>buy avg: </td><td>`+abbreviateNumber(allItems[itemID]["buy_average"])+` coins</td></tr>
-	                    <tr><td>sell avg: </td><td>`+abbreviateNumber(allItems[itemID]["sell_average"])+` coins</td></tr>
-						<tr><td>overall avg: </td><td>`+abbreviateNumber(allItems[itemID]["overall_average"])+` coins</td></tr>
-	                    </table>
-	                    <table>
-	                    	<thead>
-	                    		<tr>
-	                    			<th>osrs price</th>
-	                    			<th>osbuddy price</th>
-	                    		</tr>
-	                    	</thead>
-	                    	<tbody>
-	                    		<tr>
-	                    			<td>`+jinfo["current"]["price"]+` coins</td>
-	                    			<td>`+abbreviateNumber(oinfo["overall"])+` coins</td>
-	                    		</tr>
-	                    	</tbody>
-	                    </table>
+	              <div class='col s12'>
+					<div class='card'>
+					  <div class='card-content row'>
+						<div class="col m2 hide-on-med-and-down" style="height:100%">
+							<img src="https://`+jinfo["icon_large"].substring(7)+`">
+						</div>
+						<div class="col m10 s12">
+							<div class='card-title'>`+data[itemID].name+`</div>
+							<p>`+jinfo["description"]+`</p>
+							<table>
+								<thead>
+									<tr>
+										<th>osrs price</th>
+										<th>osbuddy price</th>
+										<th>high alchemy price: </th>
+										<th>gp per high alch cast: </th>
+										<th>buy avg: </th>
+										<th>sell avg: </th>
+										<th>overall avg: </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>`+jinfo["current"]["price"]+` coins</td>
+										<td>`+abbreviateNumber(oinfo["overall"])+` coins</td>
+										<td>`+abbreviateNumber(alch_reward)+` coins</td>
+										<td>`+presymbol+alch_cost+` coins</td>
+										<td>`+abbreviateNumber(allItems[itemID]["buy_average"])+` coins</td>
+										<td>`+abbreviateNumber(allItems[itemID]["sell_average"])+` coins</td>
+										<td>`+abbreviateNumber(allItems[itemID]["overall_average"])+` coins</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 	                  </div>
 	                </div>
-	              </div>
-	              <div class='col l8 m12 s12'>
 	                <div class='card'>
 	                  <div class='card-content'>
 	            		<div class='card-title'>Trends</div>
@@ -367,21 +385,30 @@ function loadItem(data, itemID){
 	                    </table>
 	                  </div>
 	                </div>
-	              
+					<div class="card">
+						<div class="card-content">
+							<div class="card-title row">chart timescale: <span style="float:right"><a class="btn" id="week">1 Week</a><a class="btn" id="2week">2 weeks</a><a class="btn" id="month">1 Month</a><a class="btn" id="3month">3 months</a><a class="btn" id="halfyear">6 months</a></span></div>
+						</div>
+					</div>
 	              	<div class='card'>
 	                  <div class='card-content'>
-	            		<div class='card-title'>Prices<span style="float:right"><a class="btn" id="week">1 Week</a><a class="btn" id="2week">2 weeks</a><a class="btn" id="month">1 Month</a><a class="btn" id="3month">3 months</a><a class="btn" id="halfyear">6 months</a></span></div>
-	            		<div>
-	                    	<canvas id="plotMe" style="width:100%"></canvas>
-	                    </div>
-	                    
-	                  </div>
+	            		<div class='card-title'>Prices</div>
+	                    <canvas id="plotMe" style="width:100%"></canvas>
+						<h5>Raw data</h5>
+						<div style="max-height:500px;overflow-y:scroll">
+							<div id="priceList"></div>
+						</div>
+					  </div>
 	                </div>
 	              
 	              	<div class='card'>
 	                  <div class='card-content'>
-	            		<div class='card-title'>Traded amounts</div>
-	                    <canvas id="saleHistory" style="width:100%"></canvas>
+	            		<div class='card-title'>Traded amounts - only OSB users</div>
+						<canvas id="saleHistory" style="width:100%"></canvas>
+						<h5>Raw data</h5>
+						<div style="max-height:500px;overflow-y:scroll">
+							<div id="saleList"></div>
+						</div>
 	                  </div>
 	                </div>
 	              </div>
@@ -439,6 +466,102 @@ function loadItem(data, itemID){
 				}
 			});
 			
+			//loop through the formatted data and display it in the grids
+
+			//reverse arrays first
+			var datesR = dates.slice();
+			var formattedJagexAverageR=formattedJagexAverage.slice();
+			var formattedJagexPricesR =formattedJagexPrices.slice();
+			var formattedOsbPricesR	= formattedOsbPrices.slice();
+			var formattedOsbSellR 	= formattedOsbSell.slice();
+			var formattedOsbBuyR	= formattedOsbBuy.slice();
+
+			var saleDatesR 		= saleDates.slice();
+			var formattedSellsR	= formattedSells.slice();
+			var formattedBuysR 	= formattedBuys.slice();
+			datesR.reverse();
+			formattedJagexAverageR.reverse();
+			formattedJagexPricesR.reverse();
+			formattedOsbPricesR.reverse();
+			formattedOsbSellR.reverse();
+			formattedOsbBuyR.reverse();
+
+			saleDatesR.reverse();
+			formattedSellsR.reverse();
+			formattedBuysR.reverse();
+
+			function differenceValue(cur, previous){
+				var difference =  cur-previous;
+				if(difference == null){difference = 0}
+				if(difference == 0){
+					return "<span class='new badge blue' data-badge-caption='coins'>"+abbreviateNumber(difference)+"</span>";
+				}else if(difference > 0){
+					return "<span class='new badge green' data-badge-caption='coins'>"+abbreviateNumber(difference)+"</span>";
+				}else{
+					return "<span class='new badge red' data-badge-caption='coins'>"+abbreviateNumber(difference)+"</span>";
+				}
+			}
+			function differenceNum(cur, previous){
+				var difference =  cur-previous;
+				if(difference == null){difference = 0}
+				if(difference == 0){
+					return "<span class='new badge blue' data-badge-caption='units'>"+abbreviateNumber(difference)+"</span>";
+				}else if(difference > 0){
+					return "<span class='new badge green' data-badge-caption='units'>"+abbreviateNumber(difference)+"</span>";
+				}else{
+					return "<span class='new badge red' data-badge-caption='units'>"+abbreviateNumber(difference)+"</span>";
+				}
+			}
+			var priceList = `
+			<table>
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Jagex price</th>
+						<th>Jagex average</th>
+						<th>OSB overall</th>
+						<th>OSB sell</th>
+						<th>OSB buy</th>
+					</tr>
+				</thead>
+				<tbody>`;
+			$.each(datesR, function(key, val){
+				priceList += `<tr>
+					<td>`+formatDate(val)+`</td>
+					<td>`+abbreviateNumber(formattedJagexPricesR[key])	+` `	+differenceValue(formattedJagexPricesR[key], formattedJagexPricesR[key+1])+`</td>
+					<td>`+abbreviateNumber(formattedJagexAverageR[key])	+` `	+differenceValue(formattedJagexAverageR[key], formattedJagexAverageR[key+1])+`</td>
+					<td>`+abbreviateNumber(formattedOsbPricesR[key])	+` `	+differenceValue(formattedOsbPricesR[key], formattedOsbPricesR[key+1])+`</td>
+					<td>`+abbreviateNumber(formattedOsbSellR[key])		+` `	+differenceValue(formattedOsbSellR[key], formattedOsbSellR[key+1])+`</td>
+					<td>`+abbreviateNumber(formattedOsbBuyR[key])		+` `	+differenceValue(formattedOsbBuyR[key], formattedOsbBuyR[key+1])+`</td>
+				</tr>`;
+			});
+			priceList += `</tbody>
+			</table>`;
+			$("#priceList").html(priceList);
+
+			var saleList = `
+			<table>
+				<thead>
+					<tr>
+						<th>date</th>
+						<th>sold</th>
+						<th>bought</th>
+					</tr>
+				</thead>
+				<tbody>`;
+			$.each(saleDatesR, function(key, val){
+				saleList += `<tr>
+					<td>`+formatDate(val)+`</td>
+					<td>`+abbreviateNumber(formattedSellsR[key])	+` `+differenceNum(formattedSellsR[key], formattedSellsR[key+1])+`</td>
+					<td>`+abbreviateNumber(formattedBuysR[key])	+` `+differenceNum(formattedBuysR[key], formattedBuysR[key+1])+`</td>
+				</tr>`;
+			});
+			saleList += `</tbody>
+			</table>`;
+			$("#saleList").html(saleList);
+
+
+
 
 
 			chartData = {
