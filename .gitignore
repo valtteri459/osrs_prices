@@ -1,1 +1,2 @@
 cached_requests/*
+!cached_requests/cached_go_here
